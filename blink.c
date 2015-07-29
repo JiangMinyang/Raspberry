@@ -10,3 +10,6 @@ int main() {
 	}
 	return 0;
 }
+
+// gcc -Wall -o blink blink.c -lwiringPi
+// sudo ./blink
