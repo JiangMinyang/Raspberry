@@ -2,14 +2,15 @@ var RaspiCam = require('raspicam');
 
 exports.takePhoto = function(callback) {
 	var opts = {
-		w: 1386,
-		h: 768,
+		w: 1920,
+		h: 1080,
 		q: 100,
 		e: 'jpg',
 		mode: 'photo',
 		output: 'cam.jpg',
 		vf: true,
-		hf: true
+		hf: true,
+		t: 1000
 	};
 	
 	var camera = new RaspiCam(opts);
