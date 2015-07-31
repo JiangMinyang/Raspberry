@@ -1,0 +1,250 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'wiring-pi' ]
+2 info using npm@2.10.1
+3 info using node@v0.12.4
+4 verbose install initial load of /Users/Minyang/Documents/workspace/Raspberry/package.json
+5 warn package.json raspberry@1.0.0 No description
+6 verbose readDependencies loading dependencies from /Users/Minyang/Documents/workspace/Raspberry/package.json
+7 silly cache add args [ 'wiring-pi', null ]
+8 verbose cache add spec wiring-pi
+9 silly cache add parsed spec { raw: 'wiring-pi',
+9 silly cache add   scope: null,
+9 silly cache add   name: 'wiring-pi',
+9 silly cache add   rawSpec: '',
+9 silly cache add   spec: '*',
+9 silly cache add   type: 'range' }
+10 silly addNamed wiring-pi@*
+11 verbose addNamed "*" is a valid semver range for wiring-pi
+12 silly addNameRange { name: 'wiring-pi', range: '*', hasData: false }
+13 silly mapToRegistry name wiring-pi
+14 silly mapToRegistry using default registry
+15 silly mapToRegistry registry https://registry.npmjs.org/
+16 silly mapToRegistry uri https://registry.npmjs.org/wiring-pi
+17 verbose addNameRange registry:https://registry.npmjs.org/wiring-pi not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/wiring-pi
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 4:58:49 PM
+21 verbose request id 7004446a50e308fa
+22 verbose etag "3V0VHJ02I0AD8R806XYMGGDUR"
+23 http request GET https://registry.npmjs.org/wiring-pi
+24 http 304 https://registry.npmjs.org/wiring-pi
+25 silly get cb [ 304,
+25 silly get   { date: 'Wed, 29 Jul 2015 23:58:50 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     'cache-control': 'max-age=60',
+25 silly get     etag: '"3V0VHJ02I0AD8R806XYMGGDUR"',
+25 silly get     age: '0',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-atl6234-ATL',
+25 silly get     'x-cache': 'MISS',
+25 silly get     'x-cache-hits': '0',
+25 silly get     'x-timer': 'S1438214330.248650,VS0,VE35',
+25 silly get     vary: 'Accept' } ]
+26 verbose etag https://registry.npmjs.org/wiring-pi from cache
+27 verbose get saving wiring-pi to /Users/Minyang/.npm/registry.npmjs.org/wiring-pi/.cache.json
+28 silly addNameRange number 2 { name: 'wiring-pi', range: '*', hasData: true }
+29 silly addNameRange versions [ 'wiring-pi',
+29 silly addNameRange   [ '0.1.0',
+29 silly addNameRange     '0.1.1',
+29 silly addNameRange     '0.1.2',
+29 silly addNameRange     '0.2.0',
+29 silly addNameRange     '1.0.0',
+29 silly addNameRange     '1.0.1',
+29 silly addNameRange     '1.0.2',
+29 silly addNameRange     '1.1.0',
+29 silly addNameRange     '1.1.1',
+29 silly addNameRange     '1.1.2',
+29 silly addNameRange     '2.0.0' ] ]
+30 silly addNamed wiring-pi@2.0.0
+31 verbose addNamed "2.0.0" is a plain semver version for wiring-pi
+32 silly cache afterAdd wiring-pi@2.0.0
+33 verbose afterAdd /Users/Minyang/.npm/wiring-pi/2.0.0/package/package.json not in flight; writing
+34 verbose afterAdd /Users/Minyang/.npm/wiring-pi/2.0.0/package/package.json written
+35 silly install resolved [ { name: 'wiring-pi',
+35 silly install resolved     version: '2.0.0',
+35 silly install resolved     description: 'Bindings to wiringPi',
+35 silly install resolved     main: 'lib/exports.js',
+35 silly install resolved     scripts:
+35 silly install resolved      { test: 'echo "Error: no test specified" && exit 1',
+35 silly install resolved        install: '/bin/bash ./install.sh' },
+35 silly install resolved     repository:
+35 silly install resolved      { type: 'git',
+35 silly install resolved        url: 'git+ssh://git@github.com/eugeneware/wiring-pi.git' },
+35 silly install resolved     keywords: [ 'wiringPi', 'gpio', 'raspberry', 'pi', 'raspberrypi', 'bcm2835' ],
+35 silly install resolved     author: { name: 'Igor Soarez', email: 'igorsoarez@gmail.com' },
+35 silly install resolved     contributors: [ [Object], [Object] ],
+35 silly install resolved     license: 'BSD',
+35 silly install resolved     gitHead: '5af174479431aa2c649237816735333e26898fa1',
+35 silly install resolved     bugs: { url: 'https://github.com/eugeneware/wiring-pi/issues' },
+35 silly install resolved     homepage: 'https://github.com/eugeneware/wiring-pi',
+35 silly install resolved     _id: 'wiring-pi@2.0.0',
+35 silly install resolved     _shasum: '080cf7458a26fadba34327cd92ae07807a9b7d6b',
+35 silly install resolved     _from: 'wiring-pi@*',
+35 silly install resolved     _npmVersion: '1.4.28',
+35 silly install resolved     _npmUser: { name: 'leandregohy', email: 'leandre.gohy@hexeo.be' },
+35 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+35 silly install resolved     dist:
+35 silly install resolved      { shasum: '080cf7458a26fadba34327cd92ae07807a9b7d6b',
+35 silly install resolved        tarball: 'http://registry.npmjs.org/wiring-pi/-/wiring-pi-2.0.0.tgz' },
+35 silly install resolved     directories: {},
+35 silly install resolved     _resolved: 'https://registry.npmjs.org/wiring-pi/-/wiring-pi-2.0.0.tgz',
+35 silly install resolved     readme: 'ERROR: No README data found!' } ]
+36 info install wiring-pi@2.0.0 into /Users/Minyang/Documents/workspace/Raspberry
+37 info installOne wiring-pi@2.0.0
+38 verbose installOne of wiring-pi to /Users/Minyang/Documents/workspace/Raspberry not in flight; installing
+39 verbose lock using /Users/Minyang/.npm/_locks/wiring-pi-53845d15f5079d7d.lock for /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi
+40 silly install write writing wiring-pi 2.0.0 to /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi
+41 verbose unbuild node_modules/wiring-pi
+42 silly gentlyRm /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi is being purged from base /Users/Minyang/Documents/workspace/Raspberry
+43 verbose gentlyRm don't care about contents; nuking /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi
+44 verbose tar unpack /Users/Minyang/.npm/wiring-pi/2.0.0/package.tgz
+45 verbose tar unpacking to /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi
+46 silly gentlyRm /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi is being purged
+47 verbose gentlyRm don't care about contents; nuking /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi
+48 silly gunzTarPerm modes [ '755', '644' ]
+49 silly gunzTarPerm extractEntry package.json
+50 silly gunzTarPerm extractEntry .npmignore
+51 silly gunzTarPerm extractEntry README.md
+52 silly gunzTarPerm extractEntry CONTRIBUTING.md
+53 silly gunzTarPerm extractEntry DOCUMENTATION.md
+54 silly gunzTarPerm extractEntry src/wiringPiI2C.cc
+55 silly gunzTarPerm extractEntry src/addon.cc
+56 silly gunzTarPerm extractEntry src/devlib/maxdetect.cc
+57 silly gunzTarPerm extractEntry src/devlib/devlib.cc
+58 silly gunzTarPerm extractEntry src/devlib/ds1302.cc
+59 silly gunzTarPerm extractEntry src/devlib/ds1302.h
+60 silly gunzTarPerm extractEntry src/devlib/gertboard.cc
+61 silly gunzTarPerm extractEntry src/devlib/gertboard.h
+62 silly gunzTarPerm extractEntry src/devlib/lcd.cc
+63 silly gunzTarPerm extractEntry src/devlib/lcd.h
+64 silly gunzTarPerm extractEntry src/devlib/lcd128x64.cc
+65 silly gunzTarPerm extractEntry src/devlib/lcd128x64.h
+66 silly gunzTarPerm extractEntry src/devlib/devlib.h
+67 silly gunzTarPerm extractEntry src/devlib/maxdetect.h
+68 silly gunzTarPerm extractEntry src/devlib/piFace.cc
+69 silly gunzTarPerm extractEntry src/devlib/piFace.h
+70 silly gunzTarPerm extractEntry src/devlib/piGlow.cc
+71 silly gunzTarPerm extractEntry src/devlib/piGlow.h
+72 silly gunzTarPerm extractEntry src/devlib/piNes.cc
+73 silly gunzTarPerm extractEntry src/devlib/piNes.h
+74 silly gunzTarPerm extractEntry src/devlib/tcs34725.cc
+75 silly gunzTarPerm extractEntry src/devlib/tcs34725.h
+76 silly gunzTarPerm extractEntry src/extensions/mcp23s17.h
+77 silly gunzTarPerm extractEntry src/extensions/dac7678.cc
+78 silly gunzTarPerm extractEntry src/extensions/drcSerial.cc
+79 silly gunzTarPerm extractEntry src/extensions/drcSerial.h
+80 silly gunzTarPerm extractEntry src/extensions/extensions.cc
+81 silly gunzTarPerm extractEntry src/extensions/extensions.h
+82 silly gunzTarPerm extractEntry src/extensions/max31855.cc
+83 silly gunzTarPerm extractEntry src/extensions/max31855.h
+84 silly gunzTarPerm extractEntry src/extensions/max5322.cc
+85 silly gunzTarPerm extractEntry src/extensions/max5322.h
+86 silly gunzTarPerm extractEntry src/extensions/mcp23008.cc
+87 silly gunzTarPerm extractEntry src/extensions/mcp23008.h
+88 silly gunzTarPerm extractEntry src/extensions/mcp23016.cc
+89 silly gunzTarPerm extractEntry src/extensions/mcp23016.h
+90 silly gunzTarPerm extractEntry src/extensions/mcp23017.cc
+91 silly gunzTarPerm extractEntry src/extensions/mcp23017.h
+92 silly gunzTarPerm extractEntry src/extensions/mcp23s08.cc
+93 silly gunzTarPerm extractEntry src/extensions/mcp23s08.h
+94 silly gunzTarPerm extractEntry src/extensions/mcp23s17.cc
+95 silly gunzTarPerm extractEntry src/extensions/dac7678.h
+96 silly gunzTarPerm extractEntry src/extensions/mcp3002.cc
+97 silly gunzTarPerm extractEntry src/extensions/mcp3002.h
+98 silly gunzTarPerm extractEntry src/extensions/mcp3004.cc
+99 silly gunzTarPerm extractEntry src/extensions/mcp3004.h
+100 silly gunzTarPerm extractEntry src/extensions/mcp3422.cc
+101 silly gunzTarPerm extractEntry src/extensions/mcp3422.h
+102 silly gunzTarPerm extractEntry src/extensions/mcp4802.cc
+103 silly gunzTarPerm extractEntry src/extensions/mcp4802.h
+104 silly gunzTarPerm extractEntry src/extensions/pca9685.cc
+105 silly gunzTarPerm extractEntry src/extensions/pca9685.h
+106 silly gunzTarPerm extractEntry src/extensions/pcf8574.cc
+107 silly gunzTarPerm extractEntry src/extensions/pcf8574.h
+108 silly gunzTarPerm extractEntry src/extensions/pcf8591.cc
+109 silly gunzTarPerm extractEntry src/extensions/pcf8591.h
+110 silly gunzTarPerm extractEntry src/extensions/sn3218.cc
+111 silly gunzTarPerm extractEntry src/extensions/sn3218.h
+112 silly gunzTarPerm extractEntry src/extensions/sr595.cc
+113 silly gunzTarPerm extractEntry src/extensions/sr595.h
+114 silly gunzTarPerm extractEntry src/softPwm.cc
+115 silly gunzTarPerm extractEntry src/softPwm.h
+116 silly gunzTarPerm extractEntry src/softServo.cc
+117 silly gunzTarPerm extractEntry src/softServo.h
+118 silly gunzTarPerm extractEntry src/softTone.cc
+119 silly gunzTarPerm extractEntry src/softTone.h
+120 silly gunzTarPerm extractEntry src/wiringPi.cc
+121 silly gunzTarPerm extractEntry src/wiringPi.h
+122 silly gunzTarPerm extractEntry src/addon.h
+123 silly gunzTarPerm extractEntry src/wiringPiI2C.h
+124 silly gunzTarPerm extractEntry src/wiringPiISR.cc
+125 silly gunzTarPerm extractEntry src/wiringPiISR.h
+126 silly gunzTarPerm extractEntry src/wiringPiSPI.cc
+127 silly gunzTarPerm extractEntry src/wiringPiSPI.h
+128 silly gunzTarPerm extractEntry src/wiringSerial.cc
+129 silly gunzTarPerm extractEntry src/wiringSerial.h
+130 silly gunzTarPerm extractEntry src/wiringShift.cc
+131 silly gunzTarPerm extractEntry src/wiringShift.h
+132 silly gunzTarPerm extractEntry src/wpi.cc
+133 silly gunzTarPerm extractEntry src/wpi.h
+134 silly gunzTarPerm extractEntry .gitmodules
+135 silly gunzTarPerm extractEntry examples/blink.js
+136 silly gunzTarPerm extractEntry examples/pwm.js
+137 silly gunzTarPerm extractEntry install.sh
+138 silly gunzTarPerm extractEntry lib/exports.js
+139 silly gunzTarPerm extractEntry CHANGELOG.md
+140 silly gunzTarPerm extractEntry patchs/devLib_Makefile.patch
+141 silly gunzTarPerm extractEntry patchs/gpio_Makefile.patch
+142 silly gunzTarPerm extractEntry binding.gyp
+143 verbose write writing to /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi/package.json
+144 info preinstall wiring-pi@2.0.0
+145 verbose readDependencies loading dependencies from /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi/package.json
+146 verbose readDependencies loading dependencies from /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi/package.json
+147 silly install resolved []
+148 verbose about to build /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi
+149 info build /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi
+150 info linkStuff wiring-pi@2.0.0
+151 silly linkStuff wiring-pi@2.0.0 has /Users/Minyang/Documents/workspace/Raspberry/node_modules as its parent node_modules
+152 verbose linkBins wiring-pi@2.0.0
+153 verbose linkMans wiring-pi@2.0.0
+154 verbose rebuildBundles wiring-pi@2.0.0
+155 info install wiring-pi@2.0.0
+156 verbose unsafe-perm in lifecycle true
+157 info wiring-pi@2.0.0 Failed to exec install script
+158 verbose unlock done using /Users/Minyang/.npm/_locks/wiring-pi-53845d15f5079d7d.lock for /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi
+159 verbose stack Error: wiring-pi@2.0.0 install: `/bin/bash ./install.sh`
+159 verbose stack Exit status 1
+159 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+159 verbose stack     at EventEmitter.emit (events.js:110:17)
+159 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+159 verbose stack     at ChildProcess.emit (events.js:110:17)
+159 verbose stack     at maybeClose (child_process.js:1015:16)
+159 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+160 verbose pkgid wiring-pi@2.0.0
+161 verbose cwd /Users/Minyang/Documents/workspace/Raspberry
+162 error Darwin 14.4.0
+163 error argv "node" "/usr/local/bin/npm" "install" "wiring-pi"
+164 error node v0.12.4
+165 error npm  v2.10.1
+166 error code ELIFECYCLE
+167 error wiring-pi@2.0.0 install: `/bin/bash ./install.sh`
+167 error Exit status 1
+168 error Failed at the wiring-pi@2.0.0 install script '/bin/bash ./install.sh'.
+168 error This is most likely a problem with the wiring-pi package,
+168 error not with npm itself.
+168 error Tell the author that this fails on your system:
+168 error     /bin/bash ./install.sh
+168 error You can get their info via:
+168 error     npm owner ls wiring-pi
+168 error There is likely additional logging output above.
+169 verbose exit [ 1, true ]
+170 verbose unbuild node_modules/wiring-pi
+171 info preuninstall wiring-pi@2.0.0
+172 info uninstall wiring-pi@2.0.0
+173 verbose unbuild rmStuff wiring-pi@2.0.0 from /Users/Minyang/Documents/workspace/Raspberry/node_modules
+174 info postuninstall wiring-pi@2.0.0
+175 silly gentlyRm /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi is being purged from base /Users/Minyang/Documents/workspace/Raspberry
+176 verbose gentlyRm don't care about contents; nuking /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi
+177 silly vacuum-fs purging /Users/Minyang/Documents/workspace/Raspberry/node_modules/wiring-pi
+178 silly vacuum-fs removing /Users/Minyang/Documents/workspace/Raspberry/node_modules
+179 silly vacuum-fs finished vacuuming up to /Users/Minyang/Documents/workspace/Raspberry
