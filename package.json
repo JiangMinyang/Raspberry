@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JiangMinyang/Raspberry/issues"
   },
-  "homepage": "https://github.com/JiangMinyang/Raspberry#readme"
+  "homepage": "https://github.com/JiangMinyang/Raspberry#readme",
+  "dependencies": {
+    "onoff": "^1.0.2"
+  }
 }

@@ -4,7 +4,7 @@ int main() {
 	pinMode(0, OUTPUT);
 	for(;;) {
 		digitalWrite(0, HIGH);
-		delay(500);
+		delay(1000);
 		digitalWrite(0, LOW);
 		delay(500);
 	}
