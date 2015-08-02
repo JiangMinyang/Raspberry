@@ -23,11 +23,11 @@ server.route({
 });
 server.route({
 	method: 'GET',
-	path: '/{name}',
+	path: '/images/{name}',
 	handler: function(request, response) {
-		response.file('./' + request.params.name);
+		response.file('./images/' + request.params.name);
 	}
 });
 server.start(function() {
-	console.log('start');
+	console.log('start...');
 });

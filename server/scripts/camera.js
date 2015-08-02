@@ -7,7 +7,7 @@ exports.takePhoto = function(callback) {
 		q: 100,
 		e: 'jpg',
 		mode: 'photo',
-		output: 'cam.jpg',
+		output: '/home/pi/Raspberry/server/images/cam.jpg',
 		vf: true,
 		hf: true,
 		t: 1000
