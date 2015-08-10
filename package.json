@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/JiangMinyang/Raspberry#readme",
   "dependencies": {
+    "async": "^1.4.0",
     "onoff": "^1.0.2"
   }
 }

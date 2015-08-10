@@ -1,33 +1,12 @@
 var Hapi = require('hapi');
-var camera = require('./scripts/camera');
+var routes = require('./scripts/routes');
 var server = new Hapi.Server();
 var password = 'jiangminyang';
 server.connection({
 	port: 80
 });
 
-server.route({
-	method: 'GET',
-	path: '/photo',
-	handler: function(request, response) {
-		var query = request.query;
-		if (query.key === undefined || query.key !== password) {
-			response('invalid key', 404);
-			return;
-		}
-		console.log('hello');
-		camera.takePhoto(function() {
-			response.file('./partials/photo.html');
-		});
-	}
-});
-server.route({
-	method: 'GET',
-	path: '/images/{name}',
-	handler: function(request, response) {
-		response.file('./images/' + request.params.name);
-	}
-});
+server.route(routes);
 server.start(function() {
 	console.log('start...');
 });
