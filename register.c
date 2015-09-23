@@ -15,7 +15,7 @@ void setup() {
 
 
 int main() {
-	setup();
+  setup();
   digitalWrite(clear, LOW);
   digitalWrite(clear, HIGH);
 
@@ -33,5 +33,5 @@ int main() {
       digitalWrite(latch, HIGH);
     } 
   }
-	return 0;
+  return 0;
 }
