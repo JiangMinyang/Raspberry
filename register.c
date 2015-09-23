@@ -19,13 +19,13 @@ int main() {
   digitalWrite(clear, LOW);
   digitalWrite(clear, HIGH);
 
-  int number = 3;
+  int number = 1;
   for(;;) {
     for(int i = 0; i < 4; i++) {
       digitalWrite(latch, LOW);
       digitalWrite(data, (number >> i) & 1);
       digitalWrite(clock, HIGH);
-      delay(5);
+      delay(100);
       digitalWrite(clock, LOW);
       digitalWrite(latch, HIGH);
     } 
