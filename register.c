@@ -19,6 +19,9 @@ int main() {
   digitalWrite(clear, LOW);
   digitalWrite(clear, HIGH);
 
+  digitalWrite(latch, LOW);
+  digitalWrite(latch, HIGH);
+
   int number = 1;
   for(;;) {
     for(int i = 0; i < 4; i++) {
