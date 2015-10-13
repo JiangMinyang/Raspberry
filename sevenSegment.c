@@ -1,12 +1,14 @@
 #include <wiringPi.h>
+#include <stdio.h>
 
 #define numData 1
 #define segmentData 7
 #define clock 4
 #define latch 0
+#define clear 3
 
 int num[5];
-int segment[10];
+int segment[11];
 
 void setup() {
   wiringPiSetup();
@@ -14,11 +16,18 @@ void setup() {
   pinMode(segmentData, OUTPUT);
   pinMode(clock, OUTPUT);
   pinMode(latch, OUTPUT);
+  pinMode(clear, OUTPUT);
   num[1] = 128; num[2] = 64; num[3] = 32; num[4] = 16;
-  segment[0] = 2; segment[1] = 194; segment[2] = 36; segment[3] = 12;
+  segment[0] = 2; segment[1] = 158; segment[2] = 36; segment[3] = 12;
   segment[4] = 152; segment[5] = 72; segment[6] = 64; segment[7] = 30;
   segment[8] = 0; segment[9] = 8;
-
+  segment[10] = 255;
+  digitalWrite(latch, LOW);
+  digitalWrite(clear, LOW);
+  digitalWrite(clock, LOW);
+  digitalWrite(clock, HIGH);
+  digitalWrite(clear, HIGH);
+  digitalWrite(latch, HIGH);
 }
 
 void display(int i) {
@@ -27,29 +36,36 @@ void display(int i) {
   digit[2] = (i / 100) % 10;
   digit[3] = (i / 10) % 10;
   digit[4] = i % 10;
-
-  for(int i = 1; i < 5; i++) {
-    int x1 = num[i];
-    int x2 = segment[digit[i]];
-    digitalWrite(latch, LOW);
+  int hash = 0;
+  for(int count = 0; count < 250; count++) {
+	  hash = 0;
+  for(int k = 1; k < 5; k++) {
+    int x1 = num[k];
+    int x2 = segment[digit[k]];
+	if (x2 != 2) hash = 1;
+	if (hash == 0 && x2 == 2 && k != 4) x2 = segment[10];
     for(int j = 0; j < 8; j++) {
-      digitalWrite(numData, x1 & 1);
-      digitalWrite(segment, x2 & 1);
-      x1 >>= 1;
-      x2 >>= 1;
+      digitalWrite(latch, LOW);
+      digitalWrite(numData, (x1 >> j) & 1);
+      digitalWrite(segmentData, (x2 >> j) & 1);
       digitalWrite(clock, LOW);
-      delay(3);
       digitalWrite(clock, HIGH);
+      digitalWrite(latch, HIGH);
     }
-    digitalWrite(latch, HIGH);
+	delay(1);
+  }
   }
 }
 
 int main() {
   setup();
-  for(int i = 0; i < 1000; i++) {
-    display(i);
-    delay(100);
+  int step = 1;
+  int i = 99;
+  while (1) {
+	display(i);
+	i += step;
+	if (i == 0) step = 1;
+	if (i == 9999) step = -1;
   }
   return 0;
 }

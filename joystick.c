@@ -9,6 +9,12 @@
 #define CLK 1
 #define true 1
 #define false 0
+void printBin(int n) {
+	for(int i = 0; i < 8; i++) {
+		printf("%d", (n & 0x80) >> 7);
+		n <<= 1;
+	}
+}
 void setup() {
 	wiringPiSetup();
 	pinMode(CLK, OUTPUT);
@@ -24,20 +30,13 @@ int readadc(int channel) {
 	digitalWrite(CS, HIGH);
 	digitalWrite(CLK, LOW);
 	digitalWrite(CS, LOW);
-	int command = channel | 0x18;
-	command <<= 3;
-	for(int i = 0; i < 5; i++) {
-		if ((command & 0x80)) {
-			digitalWrite(Din, HIGH);
-		} 
-		else {
-			digitalWrite(Din, LOW);
-		}
+	int ans = 0;
+	int input = 0x18 | channel;
+	for(int i = 0; i < 12; i++) {
+		digitalWrite(Din, input & (1 << (11 - i)));
 		digitalWrite(CLK, HIGH);
 		digitalWrite(CLK, LOW);
-		command <<= 1;
 	}
-	int ans = 0;
 	for(int i = 0; i < 12; i++) {
 		digitalWrite(CLK, HIGH);
 		digitalWrite(CLK, LOW);
@@ -46,9 +45,8 @@ int readadc(int channel) {
 			ans |= 0x1;
 		}
 	}
-
-	digitalWrite(CS, HIGH);
 	ans >>= 1;
+	digitalWrite(CS, HIGH);
 	return ans;
 }
 
@@ -67,10 +65,11 @@ int main() {
 	while (true) {
 		int x = readadc(0);
 		int y = readadc(1);
-		if (check(x, last_x) || check(y,last_y)) {
-			printf("x: %d  y: %d\n", x, y);
-		}	
-		last_x = x; last_y = y;
+		if (check(last_x, x) || check(last_y, y)) {
+			printf("x: %d y: %d\n", x, y);
+			last_x = x;
+			last_y = y;
+		}
 		delay(1000);
 	}
 	return 0;
